@@ -2,13 +2,12 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Projeto Mobilidade - CEBF</title>
+    <title>Pesquisa de Campo - CEBF</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <h1>Mobilidade & Sustentabilidade</h1>
-        <p>Colégio Estadual Barbosa Ferraz - Ivaiporã/PR</p>
         <nav>
             <a href="index.html">História</a>
             <a href="projeto.html">O Projeto</a>
@@ -17,15 +16,32 @@
     </header>
 
     <main>
-        <section>
-            <h2>Nossa História</h2>
-            <p>O Colégio Barbosa Ferraz tem um papel fundamental na educação do Vale do Ivaí...</p>
-            </section>
+        <h2>Pesquisa de Acessibilidade Escolar</h2>
+        <p>Alunos do 2º B: Utilizem este formulário para registrar as dificuldades encontradas no pátio, corredores e salas.</p>
+
+        <form id="formPesquisa">
+            <label for="local">Local da Escola:</label>
+            <input type="text" id="local" placeholder="Ex: Rampa da entrada, Banheiro..." required>
+
+            <label for="problema">Principal Dificuldade:</label>
+            <select id="problema">
+                <option value="piso">Piso Irregular / Buracos</option>
+                <option value="obstaculo">Obstáculos Aéreos (troncos/janelas)</option>
+                <option value="rampa">Rampa muito inclinada (Física/Torque)</option>
+                <option value="iluminacao">Baixa Iluminação (Sensores)</option>
+            </select>
+
+            <button type="button" onclick="salvarDados()">Enviar Dados</button>
+        </form>
+
+        <hr>
+
+        <h3>📊 Estatísticas Coletadas</h3>
+        <div id="resultadoEstatisticas">
+            <p>Aguardando dados para gerar o gráfico...</p>
+        </div>
     </main>
 
-    <footer>
-        <p>Visitas nesta sessão: <span id="contador">0</span></p>
-    </footer>
     <script src="script.js"></script>
 </body>
 </html>
